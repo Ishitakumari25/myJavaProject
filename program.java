@@ -118,4 +118,61 @@
 //         sc.close();
 //     }
 // }
+// import java.util.Scanner;
+
+// 
+// import java.util.Scanner;
+
+// public class problem {
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+
+
+//         System.out.print("Enter first string: ");
+//         String s1 = sc.nextLine();
+
+//         System.out.print("Enter second string: ");
+//         String s2 = sc.nextLine();
+
+ 
+//         boolean isRotation = false;
+//         if (s1.length() == s2.length()) {
+            
+//             String temp = s1 + s1;
+//             isRotation = temp.contains(s2);
+//         }
+
+
+//         System.out.println("Is \"" + s2 + "\" a rotation of \"" + s1 + "\"? " + isRotation);
+
+//         sc.close();
+//     }
+// }
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class program{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter first string: ");
+        String str1 = sc.nextLine();
+        System.out.print("Enter second string: ");
+        String str2 = sc.nextLine();
+        str1 = str1.toLowerCase();
+        str2 = str2.toLowerCase();
+        boolean isAnagram = false;
+        if (str1.length() == str2.length()) {
+            char[] arr1 = str1.toCharArray();
+            char[] arr2 = str2.toCharArray();
+            Arrays.sort(arr1);
+            Arrays.sort(arr2);
+            isAnagram = Arrays.equals(arr1, arr2);
+        }
+        System.out.println("Are \"" + str1 + "\" and \"" + str2 + "\" anagrams? " + isAnagram);
+
+        sc.close();
+    }
+}
 
