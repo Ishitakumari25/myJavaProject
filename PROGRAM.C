@@ -1,1 +1,0 @@
-#write a program of calculating percentage of a given student in cbsce board exam..his marks of 5 subject must be taken as a i/p from user keyboard(marks out of 100)
